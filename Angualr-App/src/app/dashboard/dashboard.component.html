@@ -1,1 +1,49 @@
-<p>dashboard works!</p>
+<div class="content">
+    <div class="main-cards">
+        <div class="card" *ngFor="let card of mainCards">
+            <div class="cover-div" (click)="redirect(card.edirectAddress)"></div>
+            <div class="card-icon" >
+                <i [ngClass]="card.icon"></i>
+            </div>
+            <div class="fs150 card-title">
+                <span>{{card.name}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="configurable-cards">
+        <div class="card card-small" *ngFor="let card of configurableCards">
+            <div class="cover-div-small" (click)="redirect(card.edirectAddress)"></div>
+            <div class="card-icon-small" (click)="redirect(card.edirectAddress)">
+                <i [ngClass]="card.icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+
+
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Email</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.firstName}}</td>
+            <td>{{user.secondName}}</td>
+            <td>{{user.email}}</td>
+            <td class="display-inline">{{user.status}}<p [ngClass]="userService.getWorkStatusIcon(user.status)"></p></td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+
+</div>
+

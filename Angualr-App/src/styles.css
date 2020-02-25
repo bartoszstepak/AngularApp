@@ -39,3 +39,37 @@ html, body
 .fs175{
     font-size: 1.75em;
 }
+
+.dot {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: table;
+}
+
+.green{
+    background-color: rgb(72, 233, 72);
+}
+
+.gray{
+    background-color: grey;
+}
+
+  .status-name{
+      width: fit-content;
+      float: left;
+  }
+
+  .status-icon{
+    left: 6px;
+    top: 6px;
+    position: relative;
+  }
+
+  .circle-icon{
+    height: 1em;
+    width: 1em;
+    border: 1px solid rgb(72, 233, 72);
+    border-radius: 50%;
+    display: table;
+  }

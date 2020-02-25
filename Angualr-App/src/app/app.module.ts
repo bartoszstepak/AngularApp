@@ -9,6 +9,7 @@ import { DeviceService } from './share/services/device.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopBarComponent } from './core/top-bar/top-bar.component';
 import { SideMenuComponent } from './core/side-menu/side-menu.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { SideMenuComponent } from './core/side-menu/side-menu.component';
     BrowserModule,
     AppRoutingModule, 
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: DashboardComponent
+      }
+    ])
   ],
   
   providers: [DeviceService],
