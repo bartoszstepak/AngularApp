@@ -13,14 +13,29 @@
 
 .clock-on-btn{
     height: 100%;
-    width: 80px;
+    width: 110px;
     padding: 0;
     float: left;
-    font-size: x-small;
+    top: 2px;
     margin-right: 15px;
+    margin-left: 15px;
 }
 
 .time-counter{
     height: 100%;
     text-align: center;
+}
+
+.top-bar-actions{
+    float: right;
+    display: flex;
+    margin-right: 10px;
+}
+
+.icon{
+    font-size: 20px;
+    padding-left: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
 }

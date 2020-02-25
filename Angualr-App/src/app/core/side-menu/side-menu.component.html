@@ -9,16 +9,16 @@
         </div>
         <div class="user-info">
             <span class="fs150">Witaj</span>
-            <span class="fs100">Jan Nowak</span>
-            <span class="fs100 status-name">online</span>
-            <p class="dot status-icon"></p>
+            <span class="fs125">{{user.firstName}} {{user.secondName}}</span>
+            <span class="fs125 status-name">{{user.status}}</span>
+            <p [ngClass]="userService.getWorkStatusIcon(user.status)"></p>
         </div>
     </div>
     <div class="action-list">
         <ul class="">
             <li  class="" *ngFor="let action of sideMenuActions">
-                <span class="far fa-arrow-alt-circle-right"></span>
-                <span class="action-name">{{action}}</span>
+                <span class="fas fa-book-reader"></span>
+                <span class=" fs150 action-name">{{action}}</span>
             </li>
         </ul>
     </div>

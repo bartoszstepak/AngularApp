@@ -40,7 +40,7 @@
 }
 
 .profile-photo {
-    height: 60px;
+    height: 70px;
     width: 30%;
     float: left;
 
@@ -48,8 +48,8 @@
 
 
 .profile-photo img{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     border: 1px solid #c0c0c0;
 }
@@ -61,12 +61,19 @@
 }
 
 .dot {
-    height: 0.75em;
-    width: 0.75em;
-    background-color: rgb(72, 233, 72);
+    height: 1em;
+    width: 1em;
     border-radius: 50%;
     display: table;
-  }
+}
+
+.green{
+    background-color: rgb(72, 233, 72);
+}
+
+.gray{
+    background-color: grey;
+}
 
   .status-name{
       width: fit-content;
@@ -74,23 +81,32 @@
   }
 
   .status-icon{
-    left: 4px;
-    top: 5px;
+    left: 6px;
+    top: 6px;
     position: relative;
   }
 
+  .circle-icon{
+    height: 1em;
+    width: 1em;
+    border: 1px solid rgb(72, 233, 72);
+    border-radius: 50%;
+    display: table;
+  }
+
   .action-list{
-      margin-top: 15px;
+      margin-top: 45px;
       color: white;
   }
 
   .action-list ul{
-    padding: 15px;
+    padding: 25px;
     list-style-type: none;
   }
 
   .action-list li{
     margin: 5px;
+    margin-top: 15px;
     list-style-type: none;
   }
 

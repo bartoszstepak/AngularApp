@@ -1,15 +1,29 @@
 <div class="content">
     <div class="shift-timer-block">
         <ng-container *ngIf="this.isClockSet; then clockOn else clockOff"></ng-container>
-        <div class="time-counter fs075">{{ time * 1000 | date:'H:mm:ss':'UTC'}}</div>
+        <div class="time-counter fs125">{{ time * 1000 | date:'H:mm:ss':'UTC'}}</div>
+    </div>
+    <div class="top-bar-actions">
+        <div class="notifications">
+            <i class="icon fas fa-bell" (click)="showNotifications()"></i>
+        </div>
+        <div class="my-profile">
+            <i class="icon fas fa-user" (click)="goToMyProfile()"></i>
+        </div>
+        <div class="personalise-dasboard">
+            <i class="icon fas fa-th-large" (click)="configureDashboard()"></i>
+        </div>
+        <div class="logout">
+            <i class="icon fas fa-sign-out-alt" (click)="logout()"></i>
+        </div>
     </div>
 </div>
 
 <ng-template #clockOn>
-    <button class="btn btn-success clock-on-btn" (click)="this.stopClock()">clock-on</button>
+    <button class="fs100 btn btn-success clock-on-btn" (click)="this.stopClock()">clock-on</button>
 </ng-template>
 
 
 <ng-template #clockOff>
-    <button class="btn btn-secondary clock-on-btn" (click)="this.startClock()">clock-off</button>
+    <button class="fs100 btn btn-secondary clock-on-btn" (click)="this.startClock()">clock-off</button>
 </ng-template>

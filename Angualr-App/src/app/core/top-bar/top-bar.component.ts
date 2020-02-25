@@ -21,6 +21,24 @@ export class TopBarComponent implements OnInit {
 
   }
 
+  public logout(): void{
+    console.log('elo');
+  }
+
+  public configureDashboard(): void{
+    console.log('elo');
+
+  }
+
+  public goToMyProfile(){
+    console.log('elo');
+
+  }
+
+  public showNotifications(){
+    console.log('elo');
+
+  }
 
   stopClock(): void {
     this.isClockSet = false;
