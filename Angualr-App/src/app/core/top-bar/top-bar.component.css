@@ -1,0 +1,26 @@
+.content{
+    height: 100%;
+    padding: 10px;
+    background-color: #243a61;
+    color: white;
+}
+
+.shift-timer-block{
+    height: 100%;
+    float: left;
+    display: flex;
+}
+
+.clock-on-btn{
+    height: 100%;
+    width: 80px;
+    padding: 0;
+    float: left;
+    font-size: x-small;
+    margin-right: 15px;
+}
+
+.time-counter{
+    height: 100%;
+    text-align: center;
+}

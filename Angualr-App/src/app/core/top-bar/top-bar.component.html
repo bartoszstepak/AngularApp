@@ -1,0 +1,15 @@
+<div class="content">
+    <div class="shift-timer-block">
+        <ng-container *ngIf="this.isClockSet; then clockOn else clockOff"></ng-container>
+        <div class="time-counter fs075">{{ time * 1000 | date:'H:mm:ss':'UTC'}}</div>
+    </div>
+</div>
+
+<ng-template #clockOn>
+    <button class="btn btn-success clock-on-btn" (click)="this.stopClock()">clock-on</button>
+</ng-template>
+
+
+<ng-template #clockOff>
+    <button class="btn btn-secondary clock-on-btn" (click)="this.startClock()">clock-off</button>
+</ng-template>

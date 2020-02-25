@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+html, body
+{
+    height: 100%;
+    margin: 0px;
+}
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+    font-family: blod;
+    src: url("./assets/Aslina-Bold.otf") format("opentype");
+}
+
+
+.fs025{
+    font-size: 0.25em;
+}
+
+.fs050{
+    font-size: 0.50em;
+}
+
+.fs075{
+    font-size: 0.75em;
+}
+
+.fs100{
+    font-size: 1em;
+}
+
+.fs125{
+    font-size: 1.25em;
+}
+
+.fs150{
+    font-size: 1.50em;
+}
+
+.fs175{
+    font-size: 1.75em;
+}

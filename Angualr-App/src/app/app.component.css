@@ -1,0 +1,39 @@
+.top-bar{
+    width: calc(100% - 200px);
+    height: 40px;
+    float: right;
+}
+
+.side-menu{
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+.dashboard{
+    width: calc(100% - 200px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+
+@media (max-width: 1000px) {
+    .top-bar{
+        width: 100%;
+        height: 40px;
+    }
+    
+    .side-menu{
+        height: calc(100% - 40px);
+        visibility: hidden;
+    }
+    
+    .dashboard{
+        width: 100%;
+        height: calc(100% - 40px);
+        position: absolute;
+        left:0px;
+    }
+    
+  }

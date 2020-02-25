@@ -1,0 +1,99 @@
+.content{
+    height: 100%;
+    background-color: #142036;
+}
+
+.title{
+    height: 50px;
+}
+
+.company-name{
+    color: white;
+    font-size: 1.5em;
+    font-family: 'blod', Bold;
+    display: table;
+    padding-top: 5px;
+    margin: 0px auto 0px;
+}
+
+.app-name{
+    color: #1f71ff;
+    font-size: 1em;
+    font-family: 'blod', Bold;
+    display: table;
+    position: relative;
+    top:-10px;
+    margin: 0px auto;
+}
+
+.user-block{
+    color: white;
+    font-size: 0.75em;
+    font-family: 'blod';
+    margin-top: 15px;
+    padding: 10px 15px 10px 15px;
+    height: 60px;
+}
+
+.user-block span{
+    display: block;
+}
+
+.profile-photo {
+    height: 60px;
+    width: 30%;
+    float: left;
+
+}
+
+
+.profile-photo img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #c0c0c0;
+}
+
+.user-info{
+    height: 60px;
+    width:60%;
+    float: right;
+}
+
+.dot {
+    height: 0.75em;
+    width: 0.75em;
+    background-color: rgb(72, 233, 72);
+    border-radius: 50%;
+    display: table;
+  }
+
+  .status-name{
+      width: fit-content;
+      float: left;
+  }
+
+  .status-icon{
+    left: 4px;
+    top: 5px;
+    position: relative;
+  }
+
+  .action-list{
+      margin-top: 15px;
+      color: white;
+  }
+
+  .action-list ul{
+    padding: 15px;
+    list-style-type: none;
+  }
+
+  .action-list li{
+    margin: 5px;
+    list-style-type: none;
+  }
+
+  .action-list span{
+    margin-right: 15px;
+  }
