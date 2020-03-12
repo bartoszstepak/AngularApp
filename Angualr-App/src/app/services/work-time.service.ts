@@ -54,7 +54,6 @@ export class WorkTimeService implements OnInit{
     return this.http.post<any>(this.workTimeServerURL, data , {observe: 'response'}).pipe(
       catchError(ErrorHandlerService.handleError<any>('createTask'))
     );
-  
   }
 
   public getWorkedTime(): number {

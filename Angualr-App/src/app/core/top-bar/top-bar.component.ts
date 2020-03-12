@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkTimeService } from 'src/app/services/work-time.service';
+import { Router } from '@angular/router';
+import { userInfo } from 'os';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'top-bar',
@@ -9,12 +12,12 @@ import { WorkTimeService } from 'src/app/services/work-time.service';
 export class TopBarComponent implements OnInit {
 
   isClockSet = false;
-  timeStart = 0;
-  timeStop = new Date('00:00:00');
   time = 0;
 
   constructor(
-    private timeService: WorkTimeService
+    private timeService: WorkTimeService,
+    private router: Router,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
@@ -26,13 +29,13 @@ export class TopBarComponent implements OnInit {
   }
 
   public configureDashboard(): void{
-    console.log('elo');
+    this.router.navigateByUrl(``);
 
   }
 
   public goToMyProfile(){
-    console.log('elo');
-
+    var id = this.userService.getUserId();
+    this.router.navigateByUrl(`employee/${id}`);
   }
 
   public showNotifications(){

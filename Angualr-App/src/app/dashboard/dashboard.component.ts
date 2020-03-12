@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkStatus } from '../model/User';
 import { UserService } from '../services/user.service';
+import { WorkStatus } from '../employee/Model/Employee';
 
 @Component({
   selector: 'app-dashboard',
@@ -30,14 +30,17 @@ export class DashboardComponent implements OnInit {
     { name: 'Grafik', icon: 'far fa-calendar-alt'},
   ]
 
-  Users = [
-    {id: 1, firstName: 'Anna', secondName: 'Kowalska', email: 'werwer@asd.pl', status: WorkStatus.offline },
-    {id: 3, firstName: 'Jan', secondName: 'Dupczak-Dupowki_Knior', email: 'werwer@asd.pl', status: WorkStatus.offline },
-    {id: 23, firstName: 'Kmail', secondName: 'Lokai', email: 'dsadas.qeqw.e@asd.pl', status: WorkStatus.online },
-    {id: 4, firstName: 'Mariusz', secondName: 'Pedro', email: 'sd@asd.pl', status: WorkStatus.offline },
-    {id: 5, firstName: 'Rero', secondName: 'Kowaslo', email: 'sssssssssadasda@asd.pl', status: WorkStatus.online },
-    {id: 11, firstName: 'Alam', secondName: 'Milik', email: 'dssssss@asd.pl', status: WorkStatus.offline },
-  ];
+  // Users = [
+  //   {id: 1, firstName: 'Anna', secondName: 'Kowalska', email: 'werwer@asd.pl', password: WorkStatus.offline },
+  //   {id: 3, firstName: 'Jan', secondName: 'Dupczak-Dupowki_Knior', email: 'werwer@asd.pl', password: WorkStatus.offline },
+  //   {id: 23, firstName: 'Kmail', secondName: 'Lokai', email: 'dsadas.qeqw.e@asd.pl', status: WorkStatus.online },
+  //   {id: 4, firstName: 'Mariusz', secondName: 'Pedro', email: 'sd@asd.pl', status: WorkStatus.offline },
+  //   {id: 5, firstName: 'Rero', secondName: 'Kowaslo', email: 'sssssssssadasda@asd.pl', status: WorkStatus.online },
+  //   {id: 11, firstName: 'Alam', secondName: 'Milik', email: 'dssssss@asd.pl', status: WorkStatus.offline },
+  // ];
+
+  Users = [];
+  
   
 
   constructor(

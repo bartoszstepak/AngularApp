@@ -1,0 +1,4 @@
+GetMonthScheduleResponse:
+  schema:
+    $ref: "#/definitions/Schedule"
+

@@ -1,0 +1,3 @@
+AuthenticationResponse:
+  token:
+    type: string

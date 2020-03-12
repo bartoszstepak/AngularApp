@@ -11,7 +11,6 @@ html, body
     src: url("./assets/Aslina-Bold.otf") format("opentype");
 }
 
-
 .fs025{
     font-size: 0.25em;
 }
@@ -73,3 +72,5 @@ html, body
     border-radius: 50%;
     display: table;
   }
+
+

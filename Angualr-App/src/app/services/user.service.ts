@@ -1,14 +1,28 @@
-import { Injectable } from '@angular/core';
-import { User, WorkStatus, WorkStatsIcon } from '../model/User';
+import { Injectable, OnInit } from '@angular/core';
+import { AuthenticationService } from './authentication.service';
+import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { tap } from 'rxjs/operators';
+import { WorkStatus } from '../employee/Model/Employee';
+import { User } from '../model/User';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService implements OnInit {
 
-  user: User = { id: 3, firstName: "Bartosz", secondName: "Stępak", email: "bartoszstepak@gmail.com", status: WorkStatus.loggedId }
+  user: User = { id: 3, firstName: "Bartosz", secondName: "Stępak", email: "bartoszstepak@gmail.com",  status: WorkStatus.loggedId }
 
-  constructor() { }
+  ulrZKonfiga = 'elo123';
+
+  constructor(
+    private auth: AuthenticationService,
+    private http: HttpClient
+  ) { }
+
+  ngOnInit(): void{
+    this.getUser().subscribe();
+  }
 
   public getUserId(): number {
     if (this.user) {
@@ -17,8 +31,16 @@ export class UserService {
     return -1;
   }
 
-  public getUser(): User {
-    return this.user;
+  public getUser(): Observable<any> {
+    var userId = this.auth.getUserId();
+    var url = `${this.ulrZKonfiga}/${userId}`;
+    return this.user
+      ? of(this.user)
+      : this.http.get(url).pipe(
+        tap(data => {
+          this.user = data
+        })
+      );
   }
 
 
