@@ -6,6 +6,7 @@ import { WorkStatus } from './Model/Employee';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { EmployeeDetailsComponent } from './employee-profile/employee-details/employee-details.component';
 import { EmployeeSettingsComponent } from './employee-profile/employee-settings/employee-settings.component';
+import { AuthGuard } from '../helpers/auth.guard';
 
 
 
@@ -21,7 +22,7 @@ import { EmployeeSettingsComponent } from './employee-profile/employee-settings/
     RouterModule.forChild([
       {
         path: 'employee/:id',
-        component: EmployeeProfileComponent
+        component: EmployeeProfileComponent, canActivate: [AuthGuard]
       }
     ])
 

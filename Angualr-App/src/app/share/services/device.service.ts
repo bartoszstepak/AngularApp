@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-export const MOBILE_SIZE: number = 600;
-export const TABLET_SIZE: number = 1000;
+export const MOBILE_SIZE = 600;
+export const TABLET_SIZE = 1000;
 
 @Injectable({
   providedIn: 'root'

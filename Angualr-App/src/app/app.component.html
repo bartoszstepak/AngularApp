@@ -1,9 +1,15 @@
-<div class="top-bar">
-  <top-bar></top-bar>
-</div>
-<div class="side-menu">
-  <side-menu></side-menu>
-</div>
-<div class="dashboard">
+<ng-container  *ngIf="authentication.isLoggedIn(); else login">
+  <div class="top-bar">
+    <top-bar></top-bar>
+  </div>
+  <div class="side-menu">
+    <side-menu></side-menu>
+  </div>
+  <div class="dashboard">
+    <router-outlet></router-outlet>
+  </div>
+</ng-container>
+
+<ng-template #login>
   <router-outlet></router-outlet>
-</div>
+</ng-template>

@@ -34,7 +34,7 @@ export class TopBarComponent implements OnInit {
   }
 
   public goToMyProfile(){
-    var id = this.userService.getUserId();
+    let id = this.userService.getUserId();
     this.router.navigateByUrl(`employee/${id}`);
   }
 
@@ -45,13 +45,13 @@ export class TopBarComponent implements OnInit {
 
   stopClock(): void {
     this.isClockSet = false;
-    var endDate = new Date();
+    let endDate = new Date();
     this.timeService.setEndTime(endDate)
   }
 
   startClock(): void {
     this.isClockSet = true;
-    var startDate = new Date();
+    let startDate = new Date();
     this.timeService.setStartTime(startDate);
     setInterval(() => {
       this.time = this.timeService.getWorkedTime();

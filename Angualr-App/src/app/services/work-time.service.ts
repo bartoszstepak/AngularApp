@@ -13,7 +13,7 @@ export class WorkTimeService implements OnInit{
 
   private userTime = new UserWorkTime();
   private isCounting = false;
-  private workTimeServerURL = "url zapisać i pobierac z konfiga";
+  private workTimeServerURL = 'url zapisać i pobierac z konfiga';
 
   constructor(
     private userService: UserService,
@@ -37,7 +37,7 @@ export class WorkTimeService implements OnInit{
     if(date){
       this.userTime.endDate = date;
       this.isCounting = false;
-      var saveTimeSub = this.saveWorkedTime(this.userTime).subscribe( 
+      let saveTimeSub = this.saveWorkedTime(this.userTime).subscribe(
         response =>{
           debugger
           return true;
@@ -58,9 +58,9 @@ export class WorkTimeService implements OnInit{
 
   public getWorkedTime(): number {
     if (this.isCounting && this.userTime.startDate){
-      var currentDate = Date.parse(new Date().toString());
-      var startDate = Date.parse(this.userTime.startDate.toString());
-      var diffSeconds = (currentDate - startDate)/1000;
+      let currentDate = Date.parse(new Date().toString());
+      let startDate = Date.parse(this.userTime.startDate.toString());
+      let diffSeconds = (currentDate - startDate)/1000;
       return diffSeconds
     }
     return 0;

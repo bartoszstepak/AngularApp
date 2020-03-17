@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { AuthenticationService } from './authentication.service';
+import { AuthenticationService } from '../core/services/authentication.service';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
@@ -11,7 +11,7 @@ import { User } from '../model/User';
 })
 export class UserService implements OnInit {
 
-  user: User = { id: 3, firstName: "Bartosz", secondName: "Stępak", email: "bartoszstepak@gmail.com",  status: WorkStatus.loggedId }
+  user = { id: 3, firstName: 'Bartosz', secondName: 'Stępak', email: 'bartoszstepak@gmail.com',  status: WorkStatus.loggedId }
 
   ulrZKonfiga = 'elo123';
 
@@ -32,8 +32,8 @@ export class UserService implements OnInit {
   }
 
   public getUser(): Observable<any> {
-    var userId = this.auth.getUserId();
-    var url = `${this.ulrZKonfiga}/${userId}`;
+    let userId = this.auth.getUserId();
+    let url = `${this.ulrZKonfiga}/${userId}`;
     return this.user
       ? of(this.user)
       : this.http.get(url).pipe(

@@ -13,6 +13,7 @@ import { SideMenuComponent } from './core/side-menu/side-menu.component';
 import { RouterModule } from '@angular/router';
 import { EmployeeModule } from './employee/employee.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthGuard } from './helpers/auth.guard';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule.forChild([
       {
         path: '',
-        component: DashboardComponent
+        component: DashboardComponent, canActivate: [AuthGuard]
       }
     ]),
     BrowserAnimationsModule
   ],
-  
+
   providers: [DeviceService],
   bootstrap: [AppComponent]
 })

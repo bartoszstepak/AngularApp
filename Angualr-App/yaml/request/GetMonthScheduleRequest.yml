@@ -1,8 +1,0 @@
-GetMonthScheduleRequest:
-    date:
-      type: time 
-    userType:
-      type: string
-    
-
-    

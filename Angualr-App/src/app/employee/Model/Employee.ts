@@ -5,7 +5,7 @@ export class Employee {
     secondName: string;
     email: string;
     image: string;
-    
+
 }
 
 export enum WorkStatus{

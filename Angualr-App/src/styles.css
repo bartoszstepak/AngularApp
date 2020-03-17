@@ -11,6 +11,14 @@ html, body
     src: url("./assets/Aslina-Bold.otf") format("opentype");
 }
 
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .fs025{
     font-size: 0.25em;
 }
@@ -37,6 +45,14 @@ html, body
 
 .fs175{
     font-size: 1.75em;
+}
+
+.float-L{
+    float: left;
+}
+
+.float-R{
+    float: right;
 }
 
 .dot {
